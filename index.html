@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>EcoThinkers · FieldTrack</title>
+<link rel="stylesheet" href="style.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <div class="logo">🌱</div>
+      <div>
+        <h1>EcoThinkers</h1>
+        <p class="tag">FieldTrack — Monitoramento Inteligente de Campo</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#" id="refresh">Atualizar</a>
+      <a href="#" id="about">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card left">
+    <h2>📊 Temperatura & Umidade (ThingSpeak)</h2>
+    <canvas id="tsChart"></canvas>
+    <div class="meta">
+      <div><strong>Canal:</strong> 3030804</div>
+      <div><strong>Última atualização:</strong> <span id="lastUpdate">—</span></div>
+    </div>
+  </section>
+
+  <section class="card right">
+    <h2>💬 Chat com IA (opcional)</h2>
+    <div id="chatBox" class="chat-box">
+      <div class="note">Integração com IA requer backend para manter a chave segura. Aqui você tem uma prévia local do fluxo — para habilitar chat real, use Railway/Render/Glitch com a chave da OpenAI.</div>
+    </div>
+
+    <div class="chat-controls">
+      <input id="userMsg" placeholder="Pergunte sobre os dados (apenas demo)"/>
+      <button id="sendMsg">Enviar (demo)</button>
+    </div>
+
+    <div class="help">
+      <p><strong>Como ativar chat real:</strong> hospede o backend e defina a variável OPENAI_API_KEY. Posso gerar o pacote do backend pra você.</p>
+      <p class="small">Você pode hospedar este site estático no <strong>GitHub Pages</strong> ou <strong>Vercel</strong> sem backend — e ele já exibirá os dados do ThingSpeak.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">EcoThinkers · FieldTrack · Demo estática · Engenharia da Computação - FIAP</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
